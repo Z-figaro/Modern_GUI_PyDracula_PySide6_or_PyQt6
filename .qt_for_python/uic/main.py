@@ -15,10 +15,12 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
+from PySide6.QtWidgets import (QApplication, QComboBox, QFormLayout, QFrame,
+    QGridLayout, QGroupBox, QHBoxLayout, QHeaderView,
     QLabel, QLineEdit, QMainWindow, QPushButton,
-    QSizePolicy, QStackedWidget, QVBoxLayout, QWidget)
-import resources_rc
+    QRadioButton, QSizePolicy, QStackedWidget, QTableWidget,
+    QTableWidgetItem, QVBoxLayout, QWidget)
+from .resources_rc import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -1059,40 +1061,220 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.home)
         self.product = QWidget()
         self.product.setObjectName(u"product")
-        self.product.setStyleSheet(u"b")
+        self.product.setStyleSheet(u"")
         self.verticalLayout = QVBoxLayout(self.product)
         self.verticalLayout.setSpacing(10)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(10, 10, 10, 10)
-        self.row1 = QFrame(self.product)
-        self.row1.setObjectName(u"row1")
-        self.row1.setFrameShape(QFrame.StyledPanel)
-        self.row1.setFrameShadow(QFrame.Raised)
-        self.gridLayout = QGridLayout(self.row1)
-        self.gridLayout.setObjectName(u"gridLayout")
-        self.label_6 = QLabel(self.row1)
-        self.label_6.setObjectName(u"label_6")
+        self.verticalLayout.setContentsMargins(10, 10, 10, 0)
+        self.label_17 = QLabel(self.product)
+        self.label_17.setObjectName(u"label_17")
+        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.label_17.sizePolicy().hasHeightForWidth())
+        self.label_17.setSizePolicy(sizePolicy3)
 
-        self.gridLayout.addWidget(self.label_6, 0, 0, 1, 1)
+        self.verticalLayout.addWidget(self.label_17)
 
-        self.label_7 = QLabel(self.row1)
+        self.frame = QFrame(self.product)
+        self.frame.setObjectName(u"frame")
+        sizePolicy3.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
+        self.frame.setSizePolicy(sizePolicy3)
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+        self.formLayout = QFormLayout(self.frame)
+        self.formLayout.setObjectName(u"formLayout")
+        self.formLayout.setFormAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.formLayout.setContentsMargins(-1, -1, -1, 0)
+        self.label_7 = QLabel(self.frame)
         self.label_7.setObjectName(u"label_7")
 
-        self.gridLayout.addWidget(self.label_7, 1, 0, 1, 1)
+        self.formLayout.setWidget(0, QFormLayout.LabelRole, self.label_7)
 
-        self.lineEdit = QLineEdit(self.row1)
+        self.lineEdit = QLineEdit(self.frame)
         self.lineEdit.setObjectName(u"lineEdit")
 
-        self.gridLayout.addWidget(self.lineEdit, 1, 1, 1, 1)
+        self.formLayout.setWidget(0, QFormLayout.FieldRole, self.lineEdit)
 
-        self.label_8 = QLabel(self.row1)
+        self.label_8 = QLabel(self.frame)
         self.label_8.setObjectName(u"label_8")
 
-        self.gridLayout.addWidget(self.label_8, 2, 1, 1, 1)
+        self.formLayout.setWidget(1, QFormLayout.LabelRole, self.label_8)
+
+        self.lineEdit_2 = QLineEdit(self.frame)
+        self.lineEdit_2.setObjectName(u"lineEdit_2")
+
+        self.formLayout.setWidget(1, QFormLayout.FieldRole, self.lineEdit_2)
+
+        self.label_9 = QLabel(self.frame)
+        self.label_9.setObjectName(u"label_9")
+
+        self.formLayout.setWidget(2, QFormLayout.LabelRole, self.label_9)
+
+        self.lineEdit_3 = QLineEdit(self.frame)
+        self.lineEdit_3.setObjectName(u"lineEdit_3")
+
+        self.formLayout.setWidget(2, QFormLayout.FieldRole, self.lineEdit_3)
+
+        self.label_11 = QLabel(self.frame)
+        self.label_11.setObjectName(u"label_11")
+
+        self.formLayout.setWidget(3, QFormLayout.LabelRole, self.label_11)
+
+        self.lineEdit_8 = QLineEdit(self.frame)
+        self.lineEdit_8.setObjectName(u"lineEdit_8")
+
+        self.formLayout.setWidget(3, QFormLayout.FieldRole, self.lineEdit_8)
+
+        self.label_10 = QLabel(self.frame)
+        self.label_10.setObjectName(u"label_10")
+
+        self.formLayout.setWidget(4, QFormLayout.LabelRole, self.label_10)
+
+        self.lineEdit_4 = QLineEdit(self.frame)
+        self.lineEdit_4.setObjectName(u"lineEdit_4")
+
+        self.formLayout.setWidget(4, QFormLayout.FieldRole, self.lineEdit_4)
+
+        self.label_12 = QLabel(self.frame)
+        self.label_12.setObjectName(u"label_12")
+
+        self.formLayout.setWidget(5, QFormLayout.LabelRole, self.label_12)
+
+        self.lineEdit_7 = QLineEdit(self.frame)
+        self.lineEdit_7.setObjectName(u"lineEdit_7")
+
+        self.formLayout.setWidget(5, QFormLayout.FieldRole, self.lineEdit_7)
+
+        self.label_13 = QLabel(self.frame)
+        self.label_13.setObjectName(u"label_13")
+
+        self.formLayout.setWidget(6, QFormLayout.LabelRole, self.label_13)
+
+        self.lineEdit_5 = QLineEdit(self.frame)
+        self.lineEdit_5.setObjectName(u"lineEdit_5")
+
+        self.formLayout.setWidget(6, QFormLayout.FieldRole, self.lineEdit_5)
+
+        self.label_14 = QLabel(self.frame)
+        self.label_14.setObjectName(u"label_14")
+
+        self.formLayout.setWidget(7, QFormLayout.LabelRole, self.label_14)
+
+        self.lineEdit_6 = QLineEdit(self.frame)
+        self.lineEdit_6.setObjectName(u"lineEdit_6")
+
+        self.formLayout.setWidget(7, QFormLayout.FieldRole, self.lineEdit_6)
 
 
-        self.verticalLayout.addWidget(self.row1)
+        self.verticalLayout.addWidget(self.frame)
 
+        self.frame_2 = QFrame(self.product)
+        self.frame_2.setObjectName(u"frame_2")
+        sizePolicy3.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())
+        self.frame_2.setSizePolicy(sizePolicy3)
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.gridLayout = QGridLayout(self.frame_2)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setVerticalSpacing(0)
+        self.gridLayout.setContentsMargins(9, 0, -1, -1)
+        self.groupBox = QGroupBox(self.frame_2)
+        self.groupBox.setObjectName(u"groupBox")
+        self.horizontalLayout_6 = QHBoxLayout(self.groupBox)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.radioButton_5 = QRadioButton(self.groupBox)
+        self.radioButton_5.setObjectName(u"radioButton_5")
+
+        self.horizontalLayout_6.addWidget(self.radioButton_5)
+
+        self.radioButton_4 = QRadioButton(self.groupBox)
+        self.radioButton_4.setObjectName(u"radioButton_4")
+
+        self.horizontalLayout_6.addWidget(self.radioButton_4)
+
+
+        self.gridLayout.addWidget(self.groupBox, 6, 0, 1, 2)
+
+        self.radioButton_3 = QRadioButton(self.frame_2)
+        self.radioButton_3.setObjectName(u"radioButton_3")
+
+        self.gridLayout.addWidget(self.radioButton_3, 1, 3, 1, 1)
+
+        self.comboBox_2 = QComboBox(self.frame_2)
+        self.comboBox_2.addItem("")
+        self.comboBox_2.addItem("")
+        self.comboBox_2.addItem("")
+        self.comboBox_2.addItem("")
+        self.comboBox_2.setObjectName(u"comboBox_2")
+
+        self.gridLayout.addWidget(self.comboBox_2, 8, 1, 1, 1)
+
+        self.label_15 = QLabel(self.frame_2)
+        self.label_15.setObjectName(u"label_15")
+
+        self.gridLayout.addWidget(self.label_15, 5, 0, 1, 1)
+
+        self.label_20 = QLabel(self.frame_2)
+        self.label_20.setObjectName(u"label_20")
+
+        self.gridLayout.addWidget(self.label_20, 8, 0, 1, 1)
+
+        self.groupBox_2 = QGroupBox(self.frame_2)
+        self.groupBox_2.setObjectName(u"groupBox_2")
+        self.horizontalLayout_7 = QHBoxLayout(self.groupBox_2)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.radioButton_6 = QRadioButton(self.groupBox_2)
+        self.radioButton_6.setObjectName(u"radioButton_6")
+
+        self.horizontalLayout_7.addWidget(self.radioButton_6)
+
+        self.radioButton_7 = QRadioButton(self.groupBox_2)
+        self.radioButton_7.setObjectName(u"radioButton_7")
+
+        self.horizontalLayout_7.addWidget(self.radioButton_7)
+
+
+        self.gridLayout.addWidget(self.groupBox_2, 6, 2, 1, 2)
+
+        self.label_16 = QLabel(self.frame_2)
+        self.label_16.setObjectName(u"label_16")
+        sizePolicy4 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.label_16.sizePolicy().hasHeightForWidth())
+        self.label_16.setSizePolicy(sizePolicy4)
+
+        self.gridLayout.addWidget(self.label_16, 1, 0, 1, 1)
+
+        self.radioButton = QRadioButton(self.frame_2)
+        self.radioButton.setObjectName(u"radioButton")
+
+        self.gridLayout.addWidget(self.radioButton, 1, 1, 1, 1)
+
+        self.radioButton_2 = QRadioButton(self.frame_2)
+        self.radioButton_2.setObjectName(u"radioButton_2")
+
+        self.gridLayout.addWidget(self.radioButton_2, 1, 2, 1, 1)
+
+        self.comboBox = QComboBox(self.frame_2)
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.setObjectName(u"comboBox")
+        self.comboBox.setEditable(False)
+
+        self.gridLayout.addWidget(self.comboBox, 5, 1, 1, 1)
+
+
+        self.verticalLayout.addWidget(self.frame_2, 0, Qt.AlignTop)
+
+        self.verticalLayout.setStretch(0, 1)
+        self.verticalLayout.setStretch(1, 4)
+        self.verticalLayout.setStretch(2, 1)
         self.stackedWidget.addWidget(self.product)
         self.biddingflow = QWidget()
         self.biddingflow.setObjectName(u"biddingflow")
@@ -1127,6 +1309,11 @@ class Ui_MainWindow(object):
         self.law.setObjectName(u"law")
         self.verticalLayout_21 = QVBoxLayout(self.law)
         self.verticalLayout_21.setObjectName(u"verticalLayout_21")
+        self.tableWidget = QTableWidget(self.law)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.verticalLayout_21.addWidget(self.tableWidget)
+
         self.label_5 = QLabel(self.law)
         self.label_5.setObjectName(u"label_5")
 
@@ -1316,6 +1503,7 @@ class Ui_MainWindow(object):
 
         self.extraContent.setCurrentIndex(0)
         self.stackedWidget.setCurrentIndex(1)
+        self.comboBox.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1359,9 +1547,40 @@ class Ui_MainWindow(object):
         self.closeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close", None))
 #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_17.setText(QCoreApplication.translate("MainWindow", u"\u751f\u6210\u9879\u76ee", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"\u9879\u76ee\u8d1f\u8d23\u4eba\uff1a", None))
+        self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"\u5982\u6302\u9760\uff0c\u9879\u76ee\u8d1f\u8d23\u4eba\u4e3a\u5b9e\u9645\u8d1f\u8d23\u4eba", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"\u9879\u76ee\u7ecf\u7406\uff1a", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"\u91c7\u8d2d\u5355\u4f4d\u540d\u79f0\uff1a", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"\u91c7\u8d2d\u4eba\u5730\u5740\uff1a", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"\u91c7\u8d2d\u4eba\u8054\u7cfb\u4eba\uff1a", None))
+        self.label_12.setText(QCoreApplication.translate("MainWindow", u"\u91c7\u8d2d\u4eba\u8054\u7cfb\u65b9\u5f0f\uff1a", None))
+        self.label_13.setText(QCoreApplication.translate("MainWindow", u"\u9879\u76ee\u540d\u79f0\uff1a", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"\u9879\u76ee\u91d1\u989d\uff1a", None))
+        self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"\u662f\u5426\u9762\u5411\u4e2d\u5c0f\u4f01\u4e1a\uff1a", None))
+        self.radioButton_5.setText(QCoreApplication.translate("MainWindow", u"\u662f", None))
+        self.radioButton_4.setText(QCoreApplication.translate("MainWindow", u"\u5426", None))
+        self.radioButton_3.setText(QCoreApplication.translate("MainWindow", u"\u5de5\u7a0b", None))
+        self.comboBox_2.setItemText(0, QCoreApplication.translate("MainWindow", u"\u56db\u5ddd\u653f\u5e9c\u91c7\u8d2d\u7f51", None))
+        self.comboBox_2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u4e2d\u56fd\u653f\u5e9c\u91c7\u8d2d\u7f51", None))
+        self.comboBox_2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u4e2d\u56fd\u62db\u6807\u6295\u6807\u516c\u5171\u670d\u52a1\u5e73\u53f0", None))
+        self.comboBox_2.setItemText(3, QCoreApplication.translate("MainWindow", u"\u91c7\u8d2d\u4e0e\u62db\u6807\u7f51", None))
+
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"\u9879\u76ee\u91c7\u8d2d\u65b9\u5f0f\uff1a", None))
+        self.label_20.setText(QCoreApplication.translate("MainWindow", u"\u6302\u7f51\u7f51\u5740\uff1a", None))
+        self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"\u662f\u5426\u9700\u8981\u9700\u6c42\u8bba\u8bc1\uff1a", None))
+        self.radioButton_6.setText(QCoreApplication.translate("MainWindow", u"\u662f", None))
+        self.radioButton_7.setText(QCoreApplication.translate("MainWindow", u"\u5426", None))
+        self.label_16.setText(QCoreApplication.translate("MainWindow", u"\u9879\u76ee\u7c7b\u578b\uff1a", None))
+        self.radioButton.setText(QCoreApplication.translate("MainWindow", u"\u670d\u52a1", None))
+        self.radioButton_2.setText(QCoreApplication.translate("MainWindow", u"\u8d27\u7269", None))
+        self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"\u7ade\u4e89\u6027\u78cb\u5546", None))
+        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"\u516c\u5f00\u62db\u6807", None))
+        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"\u7ade\u4e89\u6027\u8c08\u5224", None))
+        self.comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"\u8be2\u4ef7", None))
+        self.comboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"\u6bd4\u9009", None))
+        self.comboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"\u5355\u4e00\u6765\u6e90", None))
+
         self.label.setText(QCoreApplication.translate("MainWindow", u"\u5f00\u6807\u6d41\u7a0b", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u5907\u6848\u6d41\u7a0b", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u5de5\u5177\u9875", None))
