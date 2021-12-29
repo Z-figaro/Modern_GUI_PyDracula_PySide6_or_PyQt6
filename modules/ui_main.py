@@ -1043,7 +1043,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.pagesContainer = QFrame(self.content)
         self.pagesContainer.setObjectName(u"pagesContainer")
-        self.pagesContainer.setStyleSheet(u"")
         self.pagesContainer.setFrameShape(QFrame.NoFrame)
         self.pagesContainer.setFrameShadow(QFrame.Raised)
         self.verticalLayout_15 = QVBoxLayout(self.pagesContainer)
@@ -1052,7 +1051,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_15.setContentsMargins(10, 10, 10, 10)
         self.stackedWidget = QStackedWidget(self.pagesContainer)
         self.stackedWidget.setObjectName(u"stackedWidget")
-        self.stackedWidget.setStyleSheet(u"background: transparent;")
         self.home = QWidget()
         self.home.setObjectName(u"home")
         self.home.setStyleSheet(u"background-image: url(:/images/images/images/logoBig.png);\n"
@@ -1061,7 +1059,6 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.home)
         self.product = QWidget()
         self.product.setObjectName(u"product")
-        self.product.setStyleSheet(u"")
         self.verticalLayout = QVBoxLayout(self.product)
         self.verticalLayout.setSpacing(10)
         self.verticalLayout.setObjectName(u"verticalLayout")

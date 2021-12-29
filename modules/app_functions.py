@@ -30,7 +30,7 @@ class AppFunctions(MainWindow):
         """
 
         # SET MANUAL STYLES
-        self.ui.lineEdit.setStyleSheet("background-color: #6272a4;")
+        # self.ui.lineEdit.setStyleSheet("background-color: #6272a4;")
 
         
 

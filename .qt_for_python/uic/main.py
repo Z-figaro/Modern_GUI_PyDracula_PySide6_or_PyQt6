@@ -20,7 +20,7 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QFormLayout, QFrame,
     QLabel, QLineEdit, QMainWindow, QPushButton,
     QRadioButton, QSizePolicy, QStackedWidget, QTableWidget,
     QTableWidgetItem, QVBoxLayout, QWidget)
-from .resources_rc import *
+import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -1043,7 +1043,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.pagesContainer = QFrame(self.content)
         self.pagesContainer.setObjectName(u"pagesContainer")
-        self.pagesContainer.setStyleSheet(u"")
         self.pagesContainer.setFrameShape(QFrame.NoFrame)
         self.pagesContainer.setFrameShadow(QFrame.Raised)
         self.verticalLayout_15 = QVBoxLayout(self.pagesContainer)
@@ -1061,7 +1060,6 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.home)
         self.product = QWidget()
         self.product.setObjectName(u"product")
-        self.product.setStyleSheet(u"")
         self.verticalLayout = QVBoxLayout(self.product)
         self.verticalLayout.setSpacing(10)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -1336,6 +1334,7 @@ class Ui_MainWindow(object):
         self.extraRightBox.setObjectName(u"extraRightBox")
         self.extraRightBox.setMinimumSize(QSize(222, 0))
         self.extraRightBox.setMaximumSize(QSize(0, 16777215))
+        self.extraRightBox.setStyleSheet(u"")
         self.extraRightBox.setFrameShape(QFrame.NoFrame)
         self.extraRightBox.setFrameShadow(QFrame.Raised)
         self.verticalLayout_7 = QVBoxLayout(self.extraRightBox)
