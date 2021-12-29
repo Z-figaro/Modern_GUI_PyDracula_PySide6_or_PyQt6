@@ -68,9 +68,12 @@ class MainWindow(QMainWindow):
 
         # LEFT MENUS
         widgets.btn_home.clicked.connect(self.buttonClick)
-        widgets.btn_widgets.clicked.connect(self.buttonClick)
-        widgets.btn_new.clicked.connect(self.buttonClick)
-        widgets.btn_save.clicked.connect(self.buttonClick)
+        widgets.btn_biddingflow.clicked.connect(self.buttonClick)
+        widgets.btn_law.clicked.connect(self.buttonClick)
+        widgets.btn_money.clicked.connect(self.buttonClick)
+        widgets.btn_product.clicked.connect(self.buttonClick)
+        widgets.btn_record.clicked.connect(self.buttonClick)
+        widgets.btn_tools.clicked.connect(self.buttonClick)
 
         # EXTRA LEFT BOX
         def openCloseLeftBox():
@@ -121,19 +124,36 @@ class MainWindow(QMainWindow):
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
         # SHOW WIDGETS PAGE
-        if btnName == "btn_widgets":
-            widgets.stackedWidget.setCurrentWidget(widgets.widgets)
+        if btnName == "btn_biddingflow":
+            widgets.stackedWidget.setCurrentWidget(widgets.biddingflow)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
         # SHOW NEW PAGE
-        if btnName == "btn_new":
-            widgets.stackedWidget.setCurrentWidget(widgets.new_page) # SET PAGE
-            UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
+        if btnName == "btn_law":
+            widgets.stackedWidget.setCurrentWidget(widgets.law)
+            UIFunctions.resetStyle(self, btnName)
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
-        if btnName == "btn_save":
-            print("Save BTN clicked!")
+        if btnName == "btn_money":
+            widgets.stackedWidget.setCurrentWidget(widgets.money)
+            UIFunctions.resetStyle(self, btnName)
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
+
+        if btnName == "btn_product":
+            widgets.stackedWidget.setCurrentWidget(widgets.product)
+            UIFunctions.resetStyle(self, btnName)
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
+        
+        if btnName == "btn_record":
+            widgets.stackedWidget.setCurrentWidget(widgets.record)
+            UIFunctions.resetStyle(self, btnName)
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
+
+        if btnName == "btn_tools":
+            widgets.stackedWidget.setCurrentWidget(widgets.tools)
+            UIFunctions.resetStyle(self, btnName)
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
