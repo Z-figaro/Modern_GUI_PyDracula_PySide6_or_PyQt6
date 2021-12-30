@@ -1878,7 +1878,7 @@ Button */
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>1</number>
+                      <number>7</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="styleSheet">
@@ -2015,7 +2015,7 @@ background-repeat: no-repeat;</string>
                           <item row="7" column="0">
                            <widget class="QLabel" name="label_14">
                             <property name="text">
-                             <string>项目金额：</string>
+                             <string>预算金额（万元）：</string>
                             </property>
                            </widget>
                           </item>
@@ -2285,7 +2285,66 @@ background-repeat: no-repeat;</string>
                        </item>
                       </layout>
                      </widget>
-                     <widget class="QWidget" name="editProduct"/>
+                     <widget class="QWidget" name="editProduct">
+                      <widget class="QFrame" name="frame_3">
+                       <property name="geometry">
+                        <rect>
+                         <x>250</x>
+                         <y>90</y>
+                         <width>120</width>
+                         <height>80</height>
+                        </rect>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                      </widget>
+                      <widget class="QFrame" name="frame_4">
+                       <property name="geometry">
+                        <rect>
+                         <x>270</x>
+                         <y>320</y>
+                         <width>120</width>
+                         <height>80</height>
+                        </rect>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="label_6">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>40</y>
+                         <width>53</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                      <widget class="TicTacToe" name="ticTacToe">
+                       <property name="geometry">
+                        <rect>
+                         <x>240</x>
+                         <y>440</y>
+                         <width>200</width>
+                         <height>200</height>
+                        </rect>
+                       </property>
+                       <property name="state" stdset="0">
+                        <string>-X-XO----</string>
+                       </property>
+                      </widget>
+                     </widget>
                      <widget class="QWidget" name="lookProduct"/>
                     </widget>
                    </item>
@@ -2688,6 +2747,13 @@ background-repeat: no-repeat;</string>
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TicTacToe</class>
+   <extends>QWidget</extends>
+   <header>tictactoe</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resources.qrc"/>
  </resources>

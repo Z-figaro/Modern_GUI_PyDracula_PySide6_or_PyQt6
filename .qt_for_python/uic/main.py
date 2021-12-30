@@ -20,6 +20,8 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QFormLayout, QFrame,
     QLabel, QLineEdit, QMainWindow, QPushButton,
     QRadioButton, QSizePolicy, QStackedWidget, QTableWidget,
     QTableWidgetItem, QVBoxLayout, QWidget)
+
+from tictactoe import TicTacToe
 import resources_rc
 
 class Ui_MainWindow(object):
@@ -1320,6 +1322,22 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.law)
         self.editProduct = QWidget()
         self.editProduct.setObjectName(u"editProduct")
+        self.frame_3 = QFrame(self.editProduct)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setGeometry(QRect(250, 90, 120, 80))
+        self.frame_3.setFrameShape(QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Raised)
+        self.frame_4 = QFrame(self.editProduct)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setGeometry(QRect(270, 320, 120, 80))
+        self.frame_4.setFrameShape(QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Raised)
+        self.label_6 = QLabel(self.editProduct)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setGeometry(QRect(200, 40, 53, 16))
+        self.ticTacToe = TicTacToe(self.editProduct)
+        self.ticTacToe.setObjectName(u"ticTacToe")
+        self.ticTacToe.setGeometry(QRect(240, 440, 200, 200))
         self.stackedWidget.addWidget(self.editProduct)
         self.lookProduct = QWidget()
         self.lookProduct.setObjectName(u"lookProduct")
@@ -1501,7 +1519,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.extraContent.setCurrentIndex(0)
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(7)
         self.comboBox.setCurrentIndex(0)
 
 
@@ -1555,7 +1573,7 @@ class Ui_MainWindow(object):
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"\u91c7\u8d2d\u4eba\u8054\u7cfb\u4eba\uff1a", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"\u91c7\u8d2d\u4eba\u8054\u7cfb\u65b9\u5f0f\uff1a", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"\u9879\u76ee\u540d\u79f0\uff1a", None))
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"\u9879\u76ee\u91d1\u989d\uff1a", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"\u9884\u7b97\u91d1\u989d\uff08\u4e07\u5143\uff09\uff1a", None))
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"\u662f\u5426\u9762\u5411\u4e2d\u5c0f\u4f01\u4e1a\uff1a", None))
         self.radioButton_5.setText(QCoreApplication.translate("MainWindow", u"\u662f", None))
         self.radioButton_4.setText(QCoreApplication.translate("MainWindow", u"\u5426", None))
@@ -1585,6 +1603,8 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u5de5\u5177\u9875", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u8d22\u52a1", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"\u6cd5\u89c4", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.ticTacToe.setProperty("state", QCoreApplication.translate("MainWindow", u"-X-XO----", None))
         self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"\u57fa\u672c\u4fe1\u606f", None))
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"\u4ee3\u7406\u534f\u8bae", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"\u9700\u6c42\u8bba\u8bc1", None))
