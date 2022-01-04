@@ -113,7 +113,8 @@ class UIFunctions(MainWindow):
                 widthExtended = standard
                 # RESET BTN
                 self.ui.toggleLeftBox.setStyleSheet(style.replace(color, ''))
-                
+
+             
         UIFunctions.start_box_animation(self, width, widthRightBox, "left")
 
     # TOGGLE RIGHT BOX

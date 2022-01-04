@@ -65,25 +65,35 @@ class MainWindow(QMainWindow):
 
         # BUTTONS CLICK
         # ///////////////////////////////////////////////////////////////
-
-        # LEFT MENUS
+        # Left menus
         widgets.btn_home.clicked.connect(self.buttonClick)
+        widgets.btn_init.clicked.connect(self.buttonClick)
         widgets.btn_biddingflow.clicked.connect(self.buttonClick)
+        
         widgets.btn_law.clicked.connect(self.buttonClick)
-        widgets.btn_money.clicked.connect(self.buttonClick)
         widgets.btn_product.clicked.connect(self.buttonClick)
         widgets.btn_record.clicked.connect(self.buttonClick)
         widgets.btn_tools.clicked.connect(self.buttonClick)
+        
+
+        # LEFT  detail MENUS
+        widgets.btn_basic.clicked.connect(self.buttonClick)
+        widgets.btn_agreement.clicked.connect(self.buttonClick)
+        widgets.btn_law.clicked.connect(self.buttonClick)
+        widgets.btn_demand.clicked.connect(self.buttonClick)
+        widgets.btn_file.clicked.connect(self.buttonClick)
+        widgets.btn_buyNotice.clicked.connect(self.buttonClick)
+        widgets.btn_enroll.clicked.connect(self.buttonClick)
 
         # EXTRA LEFT BOX
         def openCloseLeftBox():
             UIFunctions.toggleLeftBox(self, True)
-        widgets.toggleLeftBox.clicked.connect(openCloseLeftBox)
+        # widgets.toggleLeftBox.clicked.connect(openCloseLeftBox)
         widgets.extraCloseColumnBtn.clicked.connect(openCloseLeftBox)
 
         # EXTRA RIGHT BOX
         def openCloseRightBox():
-            UIFunctions.toggleRightBox(self, True)
+            UIFunctions.toggleRightBox(self,True)
         widgets.settingsTopBtn.clicked.connect(openCloseRightBox)
 
         # SHOW APP
@@ -125,6 +135,7 @@ class MainWindow(QMainWindow):
 
         # SHOW WIDGETS PAGE
         if btnName == "btn_biddingflow":
+            widgets.extraContent.setCurrentWidget(widgets.extraOpen)
             widgets.stackedWidget.setCurrentWidget(widgets.biddingflow)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
@@ -135,17 +146,20 @@ class MainWindow(QMainWindow):
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
-        if btnName == "btn_money":
-            widgets.stackedWidget.setCurrentWidget(widgets.money)
+        if btnName == "btn_init":
+            widgets.stackedWidget.setCurrentWidget(widgets.init)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
         if btnName == "btn_product":
+            widgets.extraContent.setCurrentWidget(widgets.extraProduct)  
             widgets.stackedWidget.setCurrentWidget(widgets.product)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
         
         if btnName == "btn_record":
+
+            widgets.extraContent.setCurrentWidget(widgets.extraRecord)   
             widgets.stackedWidget.setCurrentWidget(widgets.record)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
@@ -181,4 +195,4 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setWindowIcon(QIcon("icon.ico"))
     window = MainWindow()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
