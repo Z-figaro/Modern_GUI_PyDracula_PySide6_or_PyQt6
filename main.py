@@ -69,10 +69,11 @@ class MainWindow(QMainWindow):
         widgets.btn_home.clicked.connect(self.buttonClick)
         widgets.btn_init.clicked.connect(self.buttonClick)
         widgets.btn_biddingflow.clicked.connect(self.buttonClick)
-        
         widgets.btn_law.clicked.connect(self.buttonClick)
         widgets.btn_product.clicked.connect(self.buttonClick)
+        
         widgets.btn_record.clicked.connect(self.buttonClick)
+        
         widgets.btn_tools.clicked.connect(self.buttonClick)
         
 
@@ -88,8 +89,13 @@ class MainWindow(QMainWindow):
         # EXTRA LEFT BOX
         def openCloseLeftBox():
             UIFunctions.toggleLeftBox(self, True)
+        def closeLeftBox():
+            UIFunctions.toggleLeftBox(self, False)
         # widgets.toggleLeftBox.clicked.connect(openCloseLeftBox)
-        widgets.extraCloseColumnBtn.clicked.connect(openCloseLeftBox)
+        widgets.extraCloseColumnBtn.clicked.connect(closeLeftBox)
+        widgets.btn_biddingflow.clicked.connect(openCloseLeftBox)
+        widgets.btn_product.clicked.connect(openCloseLeftBox)
+        widgets.btn_record.clicked.connect(openCloseLeftBox)
 
         # EXTRA RIGHT BOX
         def openCloseRightBox():
@@ -153,7 +159,7 @@ class MainWindow(QMainWindow):
 
         if btnName == "btn_product":
             widgets.extraContent.setCurrentWidget(widgets.extraProduct)  
-            widgets.stackedWidget.setCurrentWidget(widgets.product)
+            widgets.stackedWidget.setCurrentWidget(widgets.editProduct)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
         

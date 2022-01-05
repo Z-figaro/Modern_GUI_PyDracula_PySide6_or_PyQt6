@@ -90,40 +90,44 @@ class UIFunctions(MainWindow):
     # TOGGLE LEFT BOX
     # ///////////////////////////////////////////////////////////////
     def toggleLeftBox(self, enable):
+        width = self.ui.extraLeftBox.width()
+        widthRightBox = self.ui.extraRightBox.width()
         if enable:
             # GET WIDTH
-            width = self.ui.extraLeftBox.width()
-            widthRightBox = self.ui.extraRightBox.width()
+            # width = self.ui.extraLeftBox.width()
+            
             maxExtend = Settings.LEFT_BOX_WIDTH
             color = Settings.BTN_LEFT_BOX_COLOR
             standard = 0
 
             # GET BTN STYLE
-            style = self.ui.toggleLeftBox.styleSheet()
+            # style = self.ui.toggleLeftBox.styleSheet()
 
             # SET MAX WIDTH
             if width == 0:
                 widthExtended = maxExtend
                 # SELECT BTN
-                self.ui.toggleLeftBox.setStyleSheet(style + color)
+                # self.ui.toggleLeftBox.setStyleSheet(style + color)
                 if widthRightBox != 0:
                     style = self.ui.settingsTopBtn.styleSheet()
                     self.ui.settingsTopBtn.setStyleSheet(style.replace(Settings.BTN_RIGHT_BOX_COLOR, ''))
             else:
                 widthExtended = standard
                 # RESET BTN
-                self.ui.toggleLeftBox.setStyleSheet(style.replace(color, ''))
+                # self.ui.toggleLeftBox.setStyleSheet(style.replace(color, ''))
 
              
-        UIFunctions.start_box_animation(self, width, widthRightBox, "left")
+        UIFunctions.start_box_animation(self, width, widthRightBox, "left",enable)
 
     # TOGGLE RIGHT BOX
     # ///////////////////////////////////////////////////////////////
     def toggleRightBox(self, enable):
+        width = self.ui.extraRightBox.width()
+        widthLeftBox = self.ui.extraLeftBox.width()
         if enable:
             # GET WIDTH
-            width = self.ui.extraRightBox.width()
-            widthLeftBox = self.ui.extraLeftBox.width()
+            
+            
             maxExtend = Settings.RIGHT_BOX_WIDTH
             color = Settings.BTN_RIGHT_BOX_COLOR
             standard = 0
@@ -136,30 +140,32 @@ class UIFunctions(MainWindow):
                 widthExtended = maxExtend
                 # SELECT BTN
                 self.ui.settingsTopBtn.setStyleSheet(style + color)
-                if widthLeftBox != 0:
-                    style = self.ui.toggleLeftBox.styleSheet()
-                    self.ui.toggleLeftBox.setStyleSheet(style.replace(Settings.BTN_LEFT_BOX_COLOR, ''))
+                # if widthLeftBox != 0:
+                #     style = self.ui.toggleLeftBox.styleSheet()
+                #     # self.ui.toggleLeftBox.setStyleSheet(style.replace(Settings.BTN_LEFT_BOX_COLOR, ''))
             else:
                 widthExtended = standard
                 # RESET BTN
                 self.ui.settingsTopBtn.setStyleSheet(style.replace(color, ''))
 
-            UIFunctions.start_box_animation(self, widthLeftBox, width, "right")
+        UIFunctions.start_box_animation(self, widthLeftBox, width, "right",enable)
 
-    def start_box_animation(self, left_box_width, right_box_width, direction):
+    def start_box_animation(self, left_box_width, right_box_width, direction,enable):
         right_width = 0
         left_width = 0 
 
         # Check values
-        if left_box_width == 0 and direction == "left":
+        # if left_box_width == 0 and direction == "left":
+        if direction == "left" and enable:
             left_width = 240
         else:
             left_width = 0
         # Check values
         if right_box_width == 0 and direction == "right":
+        # if direction == "right" and enable:
             right_width = 240
         else:
-            right_width = 0       
+            right_width = 0        
 
         # ANIMATION LEFT BOX        
         self.left_box = QPropertyAnimation(self.ui.extraLeftBox, b"minimumWidth")
