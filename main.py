@@ -71,9 +71,7 @@ class MainWindow(QMainWindow):
         widgets.btn_biddingflow.clicked.connect(self.buttonClick)
         widgets.btn_law.clicked.connect(self.buttonClick)
         widgets.btn_product.clicked.connect(self.buttonClick)
-        
         widgets.btn_record.clicked.connect(self.buttonClick)
-        
         widgets.btn_tools.clicked.connect(self.buttonClick)
         
 
@@ -85,6 +83,20 @@ class MainWindow(QMainWindow):
         widgets.btn_file.clicked.connect(self.buttonClick)
         widgets.btn_buyNotice.clicked.connect(self.buttonClick)
         widgets.btn_enroll.clicked.connect(self.buttonClick)
+        widgets.btn_ready.clicked.connect(self.buttonClick)
+        widgets.btn_bidOpen.clicked.connect(self.buttonClick)
+        widgets.btn_productResult.clicked.connect(self.buttonClick)
+        
+        widgets.btn_openbasic.clicked.connect(self.buttonClick)
+        widgets.btn_openLocal.clicked.connect(self.buttonClick)
+        widgets.btn_openCheck.clicked.connect(self.buttonClick)
+        widgets.btn_openfit.clicked.connect(self.buttonClick)
+        widgets.btn_openScore.clicked.connect(self.buttonClick)
+        widgets.btn_openResult.clicked.connect(self.buttonClick)
+
+        widgets.btn_recordBasic.clicked.connect(self.buttonClick)
+        widgets.btn_recordSituation.clicked.connect(self.buttonClick)
+
 
         # EXTRA LEFT BOX
         def openCloseLeftBox():
@@ -159,7 +171,7 @@ class MainWindow(QMainWindow):
 
         if btnName == "btn_product":
             widgets.extraContent.setCurrentWidget(widgets.extraProduct)  
-            widgets.stackedWidget.setCurrentWidget(widgets.editProduct)
+            widgets.stackedWidget.setCurrentWidget(widgets.basicsearch)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
         

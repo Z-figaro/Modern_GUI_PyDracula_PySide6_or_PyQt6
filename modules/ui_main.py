@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main.ui'
+## Form generated from reading UI file 'mainCIibcx.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.2
 ##
@@ -1487,7 +1487,7 @@ class Ui_MainWindow(object):
         self.editProduct.setObjectName(u"editProduct")
         self.frame_3 = QFrame(self.editProduct)
         self.frame_3.setObjectName(u"frame_3")
-        self.frame_3.setGeometry(QRect(250, 90, 120, 80))
+        self.frame_3.setGeometry(QRect(29, 90, 601, 141))
         self.frame_3.setFrameShape(QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.frame_4 = QFrame(self.editProduct)
@@ -1501,6 +1501,56 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.editProduct)
         self.basicsearch = QWidget()
         self.basicsearch.setObjectName(u"basicsearch")
+        self.searchFrame = QFrame(self.basicsearch)
+        self.searchFrame.setObjectName(u"searchFrame")
+        self.searchFrame.setGeometry(QRect(0, 110, 661, 150))
+        self.searchFrame.setMinimumSize(QSize(0, 100))
+        self.searchFrame.setFrameShape(QFrame.StyledPanel)
+        self.searchFrame.setFrameShadow(QFrame.Raised)
+        self.gridLayout_2 = QGridLayout(self.searchFrame)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.pushButton_2 = QPushButton(self.searchFrame)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+        sizePolicy5 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
+        self.pushButton_2.setSizePolicy(sizePolicy5)
+        self.pushButton_2.setMinimumSize(QSize(20, 0))
+
+        self.gridLayout_2.addWidget(self.pushButton_2, 1, 2, 1, 1)
+
+        self.comboBox_3 = QComboBox(self.searchFrame)
+        self.comboBox_3.addItem("")
+        self.comboBox_3.addItem("")
+        self.comboBox_3.setObjectName(u"comboBox_3")
+        sizePolicy6 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.comboBox_3.sizePolicy().hasHeightForWidth())
+        self.comboBox_3.setSizePolicy(sizePolicy6)
+        self.comboBox_3.setMinimumSize(QSize(25, 20))
+
+        self.gridLayout_2.addWidget(self.comboBox_3, 0, 0, 3, 1)
+
+        self.lineEdit_9 = QLineEdit(self.searchFrame)
+        self.lineEdit_9.setObjectName(u"lineEdit_9")
+        sizePolicy3.setHeightForWidth(self.lineEdit_9.sizePolicy().hasHeightForWidth())
+        self.lineEdit_9.setSizePolicy(sizePolicy3)
+
+        self.gridLayout_2.addWidget(self.lineEdit_9, 1, 1, 1, 1)
+
+        self.productList = QFrame(self.basicsearch)
+        self.productList.setObjectName(u"productList")
+        self.productList.setGeometry(QRect(9, 319, 631, 431))
+        self.productList.setFrameShape(QFrame.StyledPanel)
+        self.productList.setFrameShadow(QFrame.Raised)
+        self.tableWidget_2 = QTableWidget(self.productList)
+        self.tableWidget_2.setObjectName(u"tableWidget_2")
+        self.tableWidget_2.setGeometry(QRect(190, 70, 256, 192))
+        self.label_18 = QLabel(self.basicsearch)
+        self.label_18.setObjectName(u"label_18")
+        self.label_18.setGeometry(QRect(20, 30, 91, 16))
         self.stackedWidget.addWidget(self.basicsearch)
 
         self.verticalLayout_15.addWidget(self.stackedWidget)
@@ -1546,70 +1596,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_14.setSpacing(0)
         self.verticalLayout_14.setObjectName(u"verticalLayout_14")
         self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
-        self.btn_logout = QPushButton(self.topMenus)
-        self.btn_logout.setObjectName(u"btn_logout")
-        sizePolicy.setHeightForWidth(self.btn_logout.sizePolicy().hasHeightForWidth())
-        self.btn_logout.setSizePolicy(sizePolicy)
-        self.btn_logout.setMinimumSize(QSize(0, 45))
-        self.btn_logout.setFont(font)
-        self.btn_logout.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_logout.setLayoutDirection(Qt.LeftToRight)
-        self.btn_logout.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-file.png);")
-
-        self.verticalLayout_14.addWidget(self.btn_logout)
-
-        self.btn_message = QPushButton(self.topMenus)
-        self.btn_message.setObjectName(u"btn_message")
-        sizePolicy.setHeightForWidth(self.btn_message.sizePolicy().hasHeightForWidth())
-        self.btn_message.setSizePolicy(sizePolicy)
-        self.btn_message.setMinimumSize(QSize(0, 45))
-        self.btn_message.setFont(font)
-        self.btn_message.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_message.setLayoutDirection(Qt.LeftToRight)
-        self.btn_message.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-file.png);")
-
-        self.verticalLayout_14.addWidget(self.btn_message)
-
-        self.btn_print = QPushButton(self.topMenus)
-        self.btn_print.setObjectName(u"btn_print")
-        sizePolicy.setHeightForWidth(self.btn_print.sizePolicy().hasHeightForWidth())
-        self.btn_print.setSizePolicy(sizePolicy)
-        self.btn_print.setMinimumSize(QSize(0, 45))
-        self.btn_print.setFont(font)
-        self.btn_print.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_print.setLayoutDirection(Qt.LeftToRight)
-        self.btn_print.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-file.png);")
-
-        self.verticalLayout_14.addWidget(self.btn_print)
-
-        self.btn_document = QPushButton(self.topMenus)
-        self.btn_document.setObjectName(u"btn_document")
-        self.btn_document.setMinimumSize(QSize(0, 45))
-        self.btn_document.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-file.png);")
-
-        self.verticalLayout_14.addWidget(self.btn_document)
-
-        self.btn_invote = QPushButton(self.topMenus)
-        self.btn_invote.setObjectName(u"btn_invote")
-        self.btn_invote.setMinimumSize(QSize(0, 45))
-        self.btn_invote.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-file.png);")
-
-        self.verticalLayout_14.addWidget(self.btn_invote)
-
-        self.btn_Announcement = QPushButton(self.topMenus)
-        self.btn_Announcement.setObjectName(u"btn_Announcement")
-        self.btn_Announcement.setMinimumSize(QSize(0, 45))
-        self.btn_Announcement.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-file.png);")
-
-        self.verticalLayout_14.addWidget(self.btn_Announcement)
-
-        self.btn_result = QPushButton(self.topMenus)
-        self.btn_result.setObjectName(u"btn_result")
-        self.btn_result.setMinimumSize(QSize(0, 45))
-        self.btn_result.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-file.png);")
-
-        self.verticalLayout_14.addWidget(self.btn_result)
-
 
         self.verticalLayout_13.addWidget(self.topMenus)
 
@@ -1678,9 +1664,10 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.extraContent.setCurrentIndex(2)
+        self.extraContent.setCurrentIndex(1)
         self.stackedWidget.setCurrentIndex(8)
         self.comboBox.setCurrentIndex(0)
+        self.contentSettings.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1779,13 +1766,11 @@ class Ui_MainWindow(object):
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u8d22\u52a1", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"\u6cd5\u89c4", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"\u57fa\u672c\u4fe1\u606f", None))
-        self.btn_message.setText(QCoreApplication.translate("MainWindow", u"\u4ee3\u7406\u534f\u8bae", None))
-        self.btn_print.setText(QCoreApplication.translate("MainWindow", u"\u9700\u6c42\u8bba\u8bc1", None))
-        self.btn_document.setText(QCoreApplication.translate("MainWindow", u"\u91c7\u8d2d\u6587\u4ef6", None))
-        self.btn_invote.setText(QCoreApplication.translate("MainWindow", u"\u4e1a\u4e3b\u9080\u8bf7", None))
-        self.btn_Announcement.setText(QCoreApplication.translate("MainWindow", u"\u516c\u544a\u7ba1\u7406", None))
-        self.btn_result.setText(QCoreApplication.translate("MainWindow", u"\u91c7\u8d2d\u7ed3\u679c", None))
+        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"\u641c\u7d22", None))
+        self.comboBox_3.setItemText(0, QCoreApplication.translate("MainWindow", u"\u9879\u76ee\u540d\u79f0", None))
+        self.comboBox_3.setItemText(1, QCoreApplication.translate("MainWindow", u"\u9879\u76ee\u7f16\u53f7", None))
+
+        self.label_18.setText(QCoreApplication.translate("MainWindow", u"\u641c\u7d22\u9009\u62e9\u9879\u76ee", None))
         self.creditsLabel.setText(QCoreApplication.translate("MainWindow", u"By: figro ZP", None))
         self.version.setText(QCoreApplication.translate("MainWindow", u"V0.0.2", None))
     # retranslateUi
